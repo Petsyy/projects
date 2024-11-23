@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .container h1, .container p {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    input {
+      display: block;
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    input:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .addExpenseButton {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .addExpenseButton:hover {
+      background-color: #0056b3;
+    }
+    .no-added-expenses {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+    }
+    .expense-list {
+      margin-top: 20px;
+    }
+    .expense-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <p>Add a new item:</p>
+    <div class="form-group">
+      <label for="expenseLocation">Name:</label>
+      <input 
+        type="text" 
+        id="expenseLocation" 
+        name="expenseLocation" 
+        placeholder="Where was the expense made?" 
+        required>
+    </div>
+    <div class="form-group">
+      <label for="expenseDate">Date:</label>
+      <input 
+        type="date" 
+        id="expenseDate" 
+        name="expenseDate" 
+        required>
+    </div>
+    <div class="form-group">
+      <label for="expenseAmount">Amount:</label>
+      <input 
+        type="number" 
+        id="expenseAmount" 
+        name="expenseAmount" 
+        placeholder="Enter amount" 
+        min="0" 
+        step="0.01" 
+        required>
+    </div>
+    <button type="button" class="addExpenseButton">Add Expense</button>
+    <div class="expense-list no-added-expenses">
+      <p>No expenses added yet!</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
